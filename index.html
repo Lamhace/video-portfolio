@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ojo Oladimeji — Short-form video editor</title>
-<meta name="description" content="Short-form video editor for gaming and streamer channels. YouTube Shorts, Reels and TikToks with facecam layouts, animated captions and sound design.">
-<meta property="og:title" content="Ojo Oladimeji — Short-form video editor">
-<meta property="og:description" content="I cut long streams into Shorts people finish watching.">
+<title>Ojo Oladimeji — Video editor</title>
+<meta name="description" content="Video editor for YouTube creators and podcasts: long-form edits with chapters and smooth transitions, plus Shorts, Reels and TikToks with animated captions and sound design.">
+<meta property="og:title" content="Ojo Oladimeji — Video editor">
+<meta property="og:description" content="I turn long recordings into videos people finish watching.">
 <meta property="og:image" content="posters/notdrdonut.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23231533'/><rect x='11' y='6' width='10' height='20' rx='2.5' fill='none' stroke='%23F1EDB4' stroke-width='2.4'/><path d='M14.5 12.5v7l5-3.5z' fill='%23FF5C9A'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,6 +103,11 @@
   .clip p { margin: 0; color: var(--stone-dim); font-size: 0.95rem; line-height: 1.45; }
   .clip .len { color: var(--pink); font-weight: 600; }
 
+  .wide-shelf { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .phone.wide { aspect-ratio: 16 / 9; border-radius: 14px; }
+  .phone.wide video { object-fit: contain; }
+  #shorts { padding-top: 8px; }
+
   /* ---------- what I do ---------- */
   .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; padding: 64px 0; border-top: 1px solid var(--line); }
   .split h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0; max-width: 14ch; }
@@ -127,6 +132,7 @@
   @media (max-width: 960px) {
     .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 32px; }
     .shelf { grid-template-columns: repeat(2, 1fr); }
+    .wide-shelf { grid-template-columns: 1fr; }
     .split { grid-template-columns: 1fr; gap: 28px; }
   }
   @media (max-width: 600px) {
@@ -152,7 +158,8 @@
   <header class="top">
     <a class="name" href="#">Ojo Oladimeji</a>
     <nav aria-label="Sections">
-      <a href="#work">Work</a>
+      <a href="#work">Long-form</a>
+      <a href="#shorts">Shorts</a>
       <a href="#services">What I do</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -160,23 +167,52 @@
 
   <section class="hero">
     <div>
-      <h1>I cut long streams into Shorts people finish watching.</h1>
-      <p class="lede">Short-form video editor for gaming and streamer channels. Facecam-over-gameplay layouts, word-by-word captions, punch-in zooms and sound design, for YouTube Shorts, Reels and TikTok.</p>
+      <h1>I turn long recordings into videos people finish watching.</h1>
+      <p class="lede">Video editor for YouTube creators, podcasts and streamers. Long-form edits with chapters, smooth transitions and motion text, plus Shorts, Reels and TikToks with word-by-word captions and sound design.</p>
       <div class="actions">
         <a class="btn primary" href="https://hubstafftalent.net/profiles/ojo-oladimeji" target="_blank" rel="noopener">Hire me on Hubstaff</a>
         <a class="btn ghost" href="mailto:oladimejiojo93@gmail.com">Email me</a>
       </div>
     </div>
     <dl class="hero-facts">
-      <div><dt>Formats</dt><dd>9:16, 1:1, 16:9</dd></div>
+      <div><dt>Formats</dt><dd>Long-form &amp; Shorts</dd></div>
       <div><dt>Turnaround</dt><dd>24–48 hours</dd></div>
       <div><dt>Based in</dt><dd>Lagos, works US hours</dd></div>
     </dl>
   </section>
 
-  <section class="work" id="work" aria-labelledby="work-title">
+  <section class="work" id="work" aria-labelledby="long-title">
     <div class="work-head">
-      <h2 id="work-title">Recent edits</h2>
+      <h2 id="long-title">Long-form edits</h2>
+      <p>Previews of the first minute. Full edits available on request.</p>
+    </div>
+    <div class="wide-shelf">
+      <figure class="clip">
+        <div class="phone wide">
+          <video src="videos/craig-preview.mp4" poster="posters/craig.jpg" preload="none" playsinline></video>
+          <button class="play" aria-label="Play preview: Craig Ferguson long-form edit"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="#1E1229"/></svg></span></button>
+        </div>
+        <figcaption>
+          <h3>Craig Ferguson: Pigeons, Late Night &amp; a Glass of Sherry</h3>
+          <p><span class="len">1h25 podcast → 7:45.</span> Six stories in six chapters, each opened with a different smooth transition. Eased zoom-ins on punchlines, word-by-word captions, comedy sound effects, and music that changes with the mood.</p>
+        </figcaption>
+      </figure>
+      <figure class="clip">
+        <div class="phone wide">
+          <video src="videos/tony-preview.mp4" poster="posters/tony.jpg" preload="none" playsinline></video>
+          <button class="play" aria-label="Play preview: Tony Robbins long-form edit"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="#1E1229"/></svg></span></button>
+        </div>
+        <figcaption>
+          <h3>Tony Robbins: The Thanksgiving That Changed His Life</h3>
+          <p><span class="len">66 min interview → 9:37.</span> A cold open with his strongest lines, five chapters, on-screen cards for his 3 decisions and 5 habits, and a music bed that drops under speech.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="work" id="shorts" aria-labelledby="work-title">
+    <div class="work-head">
+      <h2 id="work-title">Shorts</h2>
       <p>Tap a video to play it with sound.</p>
     </div>
     <div class="shelf">
@@ -230,10 +266,11 @@
     <h2 id="services-title">What you get in every edit</h2>
     <div>
       <ul class="services">
-        <li><b>A hook in the first seconds</b><span>The best moment or line up front, with a title bar that tells viewers why to stay.</span></li>
-        <li><b>Tight cuts</b><span>Dead air and filler removed, without losing the story or the punchline.</span></li>
-        <li><b>Animated captions</b><span>Word-by-word captions in your colors and font, with speaker tags when there's more than one voice.</span></li>
-        <li><b>Layouts for streams</b><span>Facecam on top, gameplay below, reframed so the action stays in shot.</span></li>
+        <li><b>A hook in the first seconds</b><span>The best moment or line up front, so viewers know why to stay.</span></li>
+        <li><b>Structure for long videos</b><span>Hours of footage cut down to the best stories, ordered into chapters that keep people watching to the end.</span></li>
+        <li><b>Tight cuts, smooth flow</b><span>Dead air and filler removed, with smooth transitions and eased zooms instead of jarring jump cuts.</span></li>
+        <li><b>Captions &amp; motion text</b><span>Word-by-word captions, chapter titles, name tags and on-screen cards for key points, in your colors and font.</span></li>
+        <li><b>Shorts from long videos</b><span>Vertical clips cut from your podcast or stream, with facecam layouts for gaming content.</span></li>
         <li><b>Sound design</b><span>Sound effects on the big beats and background music ducked under speech.</span></li>
         <li><b>Revisions</b><span>Changes included until the edit feels right.</span></li>
       </ul>
@@ -248,8 +285,8 @@
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title">Have streams or long videos to clip?</h2>
-    <p>Send your channel link and the kind of edits you need.</p>
+    <h2 id="contact-title">Have a podcast, stream or long video to edit?</h2>
+    <p>Send your channel link and tell me what you need: full episodes, highlight videos, Shorts, or all three.</p>
     <div class="actions">
       <a class="btn primary" href="https://hubstafftalent.net/profiles/ojo-oladimeji" target="_blank" rel="noopener">Hire me on Hubstaff</a>
       <a class="btn ghost" href="mailto:oladimejiojo93@gmail.com">oladimejiojo93@gmail.com</a>
@@ -259,8 +296,9 @@
 
 <footer>
   <div class="wrap">
-    <p>Clips edited from DrDonut's streams for a YouTube Shorts clip channel. Footage belongs to its original creators.</p>
-    <p>Music in "He said that's not DrDonut": "Sneaky Snitch" and "Fluffing a Duck", Kevin MacLeod (incompetech.com), licensed under CC BY 4.0.</p>
+    <p>Shorts edited from DrDonut's streams for a YouTube Shorts clip channel. Footage belongs to its original creators.</p>
+    <p>Long-form samples re-edited from Creative Commons (CC BY) episodes: "Craig Ferguson: The TRUTH about Late Night" (Neal Brennan) and "Tony Robbins Interview" (The Mindset Mentor Podcast).</p>
+    <p>Music by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0.</p>
   </div>
 </footer>
 
